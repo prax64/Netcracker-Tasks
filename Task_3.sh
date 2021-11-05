@@ -32,7 +32,6 @@ free_space_sum=0
 for free_space_section in $free_space_str ; do
   free_space_sum=$(( free_space_sum + free_space_section ))
 done
-echo $free_space_sum
 if [[ $modifier_ == G ]]; then
     free_space_sum=$(( free_space_sum / 1024 / 1024 ))
   elif [[ $modifier_ == M ]]; then
