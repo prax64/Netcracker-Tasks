@@ -3,8 +3,8 @@ if [[ $EUID -ne 0 ]]; then
    echo "This script must be run as root, use sudo "$0" instead" 1>&2
    exit 1
 fi
-#yum install epel-release
-#yum groupinstall "X Window system"
+yum install epel-release
+yum groupinstall "X Window system"
 echo -e 'Выберите окружение рабочего стола:\n1)gnome\n2)mate\n3)kde\n4)xfce\nВведите число соответствующего номеру окружения от 1 до 4. По умолчанию = 3.\n'
 read shell_number
 case $shell_number in
